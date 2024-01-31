@@ -9,7 +9,7 @@ function App() {
 
   const handleSubmit = async (apiUrl) => {
     try {
-      const response = await axios.get(`/mock?apiUrl=${encodeURIComponent(apiUrl)}`);
+      const response = await axios.get(`http://localhost:3001/mock?apiUrl=${apiUrl}`);
       setApiResponse(response.data);
     } catch (error) {
       console.error('Error making API request:', error);

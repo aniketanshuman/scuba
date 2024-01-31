@@ -4,7 +4,7 @@ const ApiForm = ({ onSubmit }) => {
   const [apiUrl, setApiUrl] = useState('');
 
   const handleSubmit = () => {
-    onSubmit(apiUrl);
+    onSubmit("https://dummyjson.com/users");
   };
 
   return (
@@ -13,9 +13,9 @@ const ApiForm = ({ onSubmit }) => {
       <input
         type="text"
         id="apiUrl"
-        value={apiUrl}
+        value={"https://dummyjson.com/users"}
         onChange={(e) => setApiUrl(e.target.value)}
-        placeholder="https://dummyjson/users"
+        placeholder=""
       />
       <button onClick={handleSubmit}>Submit</button>
     </div>
