@@ -19,11 +19,10 @@ app.get("/", async (req, res) => {
   const apiUrl = req.query.apiUrl;
   console.log("apiUrl", apiUrl);
 
-  if (!apiUrl) {
-    return res.status(400).json({ error: "API URL is required" });
-  }
-
-  
+  // if (!apiUrl) {
+  //   return res.status(400).json({ error: "API URL is required" });
+  // }
+  res.send('<h1>Hello Express!</h1>');
 });
 
 app.get("/mock", async (req, res) => {
